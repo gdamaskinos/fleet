@@ -1,0 +1,99 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/serverIP"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:hint="Server IP address" />
+
+        <EditText
+            android:id="@+id/serverPort"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:hint="Server port" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/clientID"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Input the name of client" />
+
+        <EditText
+            android:id="@+id/sleepTime"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Input the sleep time" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/startButton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="Start"
+                android:checked="false" />
+
+            <Button
+                android:id="@+id/stopButton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="Stop"
+                android:checked="false" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/singleButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Single Request"
+            android:checked="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Statistics"
+            android:id="@+id/stat1"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.08" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="196dp"
+            android:layout_weight="0.51">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

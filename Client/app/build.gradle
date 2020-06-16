@@ -1,0 +1,185 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'com.android.support.multidex.MultiDexApplication'
+
+android {
+    compileSdkVersion 25
+
+    lintOptions {
+        checkReleaseBuilds false
+    }
+
+    defaultConfig {
+        resConfigs "en", "cs"
+        applicationId "com.androidsrc.client"
+        minSdkVersion 21
+        targetSdkVersion 25
+        versionCode 12
+        versionName "1.0"
+        multiDexEnabled true
+        externalNativeBuild {
+            cmake {
+                arguments '-DANDROID_TOOLCHAIN=clang'
+                arguments '-DANDROID_STL=c++_shared'
+            }
+        }
+        // add below section
+//        javaCompileOptions {
+//            annotationProcessorOptions {
+//                includeCompileClasspath true
+//            }
+//        }
+    }
+
+//    dexOptions {
+//        javaMaxHeapSize "2g"
+//    }
+//    dataBinding {
+//        enabled = true
+//    }
+
+    splits {
+        abi {
+            //enable gradle.startParameter.taskNames.contains(":app:assembleRelease")
+            enable true
+            reset()
+            include 'x86'//, 'armeabi-v7a', 'mips', 'x86' (no longer supported by NDK: 'armeabi')
+            universalApk false
+        }
+    }
+    aaptOptions {
+        cruncherEnabled = false
+    }
+    buildTypes {
+        release {
+
+//            shrinkResources true
+//            minifyEnabled true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    externalNativeBuild {
+        cmake {
+            path "src/main/cpp/CMakeLists.txt"
+        }
+    }
+    //android.dexOptions.additionalParameters = ['--minimal-main-dex']
+
+//    dexOptions {
+//        preDexLibraries = false
+//        additionalParameters += '--minimal-main-dex'
+//    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/INDEX.LIST'
+        exclude 'javax/annotation/**'
+        exclude 'org/bytedeco/javacpp/windows-x86/msvcp120.dll'
+        exclude 'org/bytedeco/javacpp/windows-x86_64/msvcp120.dll'
+        exclude 'org/bytedeco/javacpp/windows-x86/msvcr120.dll'
+        exclude 'org/bytedeco/javacpp/windows-x86_64/msvcr120.dll'
+        exclude 'javax/annotation/**'
+
+    }
+    buildToolsVersion = '28.0.3'
+
+}
+
+
+dependencies {
+//    compileOnly 'org.glassfish:javax.annotation:10.0-b28'
+    implementation "org.projectlombok:lombok:1.16.16"
+    annotationProcessor "org.projectlombok:lombok:1.16.16"
+
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //   implementation 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.8.2'
+    implementation 'org.jblas:jblas:1.2.4'
+    implementation 'gov.nist.math:jama:1.0.3'
+    implementation 'com.android.volley:volley:1.1.0'
+    implementation files('libs/connectionclass-1.0.1.jar')
+    //   implementation 'com.facebook.network.connectionclass:connectionclass:1.0.1' // conflict of javax.annotations with dl4j (solved if added with jar)
+    implementation 'com.jaredrummler:android-device-names:1.1.3'
+    //implementation 'com.google.android.gms:play-services:10.2.4'
+//    implementation 'com.parse.bolts:bolts-android:1.+'
+    //implementation project(path: ':volley')
+
+    // https://mvnrepository.com/artifact/com.esotericsoftware/kryo
+    implementation group: 'com.esotericsoftware', name: 'kryo', version: '4.0.0'
+//    implementation 'com.android.support:multidex:1.0.1'
+
+    implementation group: 'org.apache.httpcomponents' , name: 'httpclient-android' , version: '4.3.5.1'
+    implementation('org.apache.httpcomponents:httpmime:4.3') {
+        exclude module: "httpclient"
+    }
+
+    //implementation group: 'org.apache.httpcomponents' , name: 'httpclient-android' , version: '4.3.5.1'
+    // implementation 'org.apache.httpcomponents:httpcore:4.4.1'
+    // implementation 'org.apache.httpcomponents:httpclient:4.5'
+    android {
+        useLibrary 'org.apache.http.legacy'
+    }
+    //removed for ADF
+    implementation('org.deeplearning4j:deeplearning4j-core:0.7.2') {
+        exclude group: 'org.freemarker'
+    }
+    implementation 'org.nd4j:nd4j-native:0.7.2'
+    implementation 'org.nd4j:nd4j-native:0.7.2:android-x86'
+    implementation 'org.nd4j:nd4j-native:0.7.2:android-arm'
+
+    //added for ADF
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-math3
+//    implementation group: 'org.apache.commons', name: 'commons-math3', version: '3.0'
+
+//    implementation('org.deeplearning4j:deeplearning4j-core:0.9.1') {
+//        exclude group: 'org.freemarker'
+//    }
+//    implementation 'org.nd4j:nd4j-native:0.9.1'
+//    implementation 'org.nd4j:nd4j-native:0.9.1:android-x86'
+//    implementation 'org.nd4j:nd4j-native:0.9.1:android-arm'
+//    implementation 'org.bytedeco.javacpp-presets:openblas:0.2.19-1.3:android-x86'
+//    implementation 'org.bytedeco.javacpp-presets:openblas:0.2.19-1.3:android-arm'
+
+
+
+//    implementation('org.deeplearning4j:deeplearning4j-core:0.8.0') {
+//        exclude group: 'org.freemarker'
+//    }
+//    implementation 'org.nd4j:nd4j-native:0.8.0'
+//    implementation 'org.nd4j:nd4j-native:0.8.0:android-x86'
+//    implementation 'org.nd4j:nd4j-native:0.8.0:android-arm'
+}
+
+def patchKeepSpecs() {
+    def taskClass = "com.android.build.gradle.internal.tasks.multidex.CreateManifestKeepList";
+    def clazz = this.class.classLoader.loadClass(taskClass)
+    def keepSpecsField = clazz.getDeclaredField("KEEP_SPECS")
+    keepSpecsField.setAccessible(true)
+    def keepSpecsMap = (Map) keepSpecsField.get(null)
+    if (keepSpecsMap.remove("activity") != null) {
+        println "KEEP_SPECS patched: removed 'activity' root"
+    } else {
+        println "Failed to patch KEEP_SPECS: no 'activity' root found"
+    }
+}
+
+//patchKeepSpecs()
+
+//afterEvaluate {
+//    tasks.matching {
+//        it.name.startsWith('dex')
+//    }.each { dx ->
+//        if (dx.additionalParameters == null) {
+//            dx.additionalParameters = []
+//        }
+//        dx.additionalParameters += '--multi-dex' // enable multidex
+//        //dx.additionalParameters += "--main-dex-list=$projectDir/multidex.keep".toString()
+//        dx.additionalParameters += '--minimal-main-dex'
+//    }
+//}
