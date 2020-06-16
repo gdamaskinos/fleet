@@ -1,0 +1,40 @@
+cd ~
+apt-get install qemu-kvm libvirt-bin virtinst virt-viewer ebtables dnsmasq
+
+modprobe kvm_intel
+
+systemctl enable libvirtd
+systemctl start libvirtd
+
+apt-get install openjdk-7-jre openjdk-7-jdk icedtea-7-plugin
+
+wget http://dl.google.com/android/android-sdk_r23.0.2-linux.tgz
+tar -xvzf android-sdk_r23.0.2-linux.tgz
+
+rm android-sdk_r23.0.2-linux.tgz
+
+/var/lib/dpkg/info/ca-certificates-java.postinst configure
+
+cd ~/android-sdk-linux/tools
+./android update sdk --no-ui
+
+cd ../tools
+./android update sdk -a --no-ui --filter tools
+cd ../tools
+# 32-bit version
+./android update sdk -a --no-ui --filter sys-img-x86-android-23
+# 64-bit version
+./android update sdk -a --no-ui --filter sys-img-x86_64-android-23
+
+
+------
+Tested on g5k
+-----
+
+wget http://dl.google.com/android/android-sdk_r23.0.2-linux.tgz
+tar -xvzf android-sdk_r23.0.2-linux.tgz
+cd ~/android-sdk-linux/tools
+./android update sdk --no-ui
+cd ../tools
+./android update sdk -a --no-ui --filter sys-img-x86-android-23
+

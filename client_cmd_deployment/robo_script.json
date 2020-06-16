@@ -1,0 +1,417 @@
+[
+  {
+    "eventType": "DELAYED_MESSAGE_POSTED",
+    "timestamp": 1523092917219,
+    "actionCode": -1,
+    "delayTime": 1380000,
+    "canScrollTo": false,
+    "elementDescriptors": []
+  },
+  {
+    "eventType": "VIEW_CLICKED",
+    "timestamp": 1523092921154,
+    "replacementText": "Client5",
+    "actionCode": -1,
+    "delayTime": 0,
+    "canScrollTo": false,
+    "elementDescriptors": [
+      {
+        "className": "android.widget.EditText",
+        "recyclerViewChildPosition": -1,
+        "adapterViewChildPosition": -1,
+        "groupViewChildPosition": 0,
+        "resourceId": "com.androidsrc.client:id/clientID",
+        "contentDescription": "",
+        "text": "Client5"
+      },
+      {
+        "className": "android.widget.LinearLayout",
+        "recyclerViewChildPosition": -1,
+        "adapterViewChildPosition": -1,
+        "groupViewChildPosition": 1,
+        "resourceId": "",
+        "contentDescription": "",
+        "text": ""
+      },
+      {
+        "className": "android.widget.LinearLayout",
+        "recyclerViewChildPosition": -1,
+        "adapterViewChildPosition": -1,
+        "groupViewChildPosition": 0,
+        "resourceId": "",
+        "contentDescription": "",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "eventType": "VIEW_CLICKED",
+    "timestamp": 1523092922633,
+    "replacementText": "Stop",
+    "actionCode": -1,
+    "delayTime": 0,
+    "canScrollTo": false,
+    "elementDescriptors": [
+      {
+        "className": "android.widget.Button",
+        "recyclerViewChildPosition": -1,
+        "adapterViewChildPosition": -1,
+        "groupViewChildPosition": 1,
+        "resourceId": "com.androidsrc.client:id/stopButton",
+        "contentDescription": "",
+        "text": "Stop"
+      },
+      {
+        "className": "android.widget.LinearLayout",
+        "recyclerViewChildPosition": -1,
+        "adapterViewChildPosition": -1,
+        "groupViewChildPosition": 2,
+        "resourceId": "com.androidsrc.client:id/linearLayout2",
+        "contentDescription": "",
+        "text": ""
+      },
+      {
+        "className": "android.widget.LinearLayout",
+        "recyclerViewChildPosition": -1,
+        "adapterViewChildPosition": -1,
+        "groupViewChildPosition": 1,
+        "resourceId": "",
+        "contentDescription": "",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "eventType": "VIEW_CLICKED",
+    "timestamp": 1523092925981,
+    "replacementText": "Single Request",
+    "actionCode": -1,
+    "delayTime": 0,
+    "canScrollTo": false,
+    "elementDescriptors": [
+      {
+        "className": "android.widget.Button",
+        "recyclerViewChildPosition": -1,
+        "adapterViewChildPosition": -1,
+        "groupViewChildPosition": 3,
+        "resourceId": "com.androidsrc.client:id/singleButton",
+        "contentDescription": "",
+        "text": "Single Request"
+      },
+      {
+        "className": "android.widget.LinearLayout",
+        "recyclerViewChildPosition": -1,
+        "adapterViewChildPosition": -1,
+        "groupViewChildPosition": 1,
+        "resourceId": "",
+        "contentDescription": "",
+        "text": ""
+      },
+      {
+        "className": "android.widget.LinearLayout",
+        "recyclerViewChildPosition": -1,
+        "adapterViewChildPosition": -1,
+        "groupViewChildPosition": 0,
+        "resourceId": "",
+        "contentDescription": "",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "eventType": "VIEW_CLICKED",
+    "timestamp": 1523092928589,
+    "replacementText": "Client5",
+    "actionCode": -1,
+    "delayTime": 0,
+    "canScrollTo": false,
+    "elementDescriptors": [
+      {
+        "className": "android.widget.EditText",
+        "recyclerViewChildPosition": -1,
+        "adapterViewChildPosition": -1,
+        "groupViewChildPosition": 0,
+        "resourceId": "com.androidsrc.client:id/clientID",
+        "contentDescription": "",
+        "text": "Client5"
+      },
+      {
+        "className": "android.widget.LinearLayout",
+        "recyclerViewChildPosition": -1,
+        "adapterViewChildPosition": -1,
+        "groupViewChildPosition": 1,
+        "resourceId": "",
+        "contentDescription": "",
+        "text": ""
+      },
+      {
+        "className": "android.widget.LinearLayout",
+        "recyclerViewChildPosition": -1,
+        "adapterViewChildPosition": -1,
+        "groupViewChildPosition": 0,
+        "resourceId": "",
+        "contentDescription": "",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "eventType": "VIEW_TEXT_CHANGED",
+    "timestamp": 1523092929833,
+    "replacementText": "Client21",
+    "actionCode": -1,
+    "delayTime": 0,
+    "canScrollTo": false,
+    "elementDescriptors": [
+      {
+        "className": "android.widget.EditText",
+        "recyclerViewChildPosition": -1,
+        "adapterViewChildPosition": -1,
+        "groupViewChildPosition": 0,
+        "resourceId": "com.androidsrc.client:id/clientID",
+        "contentDescription": "",
+        "text": "Client5"
+      },
+      {
+        "className": "android.widget.LinearLayout",
+        "recyclerViewChildPosition": -1,
+        "adapterViewChildPosition": -1,
+        "groupViewChildPosition": 1,
+        "resourceId": "",
+        "contentDescription": "",
+        "text": ""
+      },
+      {
+        "className": "android.widget.LinearLayout",
+        "recyclerViewChildPosition": -1,
+        "adapterViewChildPosition": -1,
+        "groupViewChildPosition": 0,
+        "resourceId": "",
+        "contentDescription": "",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "eventType": "VIEW_CLICKED",
+    "timestamp": 1523093254414,
+    "replacementText": "Stop",
+    "actionCode": -1,
+    "delayTime": 0,
+    "canScrollTo": false,
+    "elementDescriptors": [
+      {
+        "className": "android.widget.Button",
+        "recyclerViewChildPosition": -1,
+        "adapterViewChildPosition": -1,
+        "groupViewChildPosition": 1,
+        "resourceId": "com.androidsrc.client:id/stopButton",
+        "contentDescription": "",
+        "text": "Stop"
+      },
+      {
+        "className": "android.widget.LinearLayout",
+        "recyclerViewChildPosition": -1,
+        "adapterViewChildPosition": -1,
+        "groupViewChildPosition": 2,
+        "resourceId": "com.androidsrc.client:id/linearLayout2",
+        "contentDescription": "",
+        "text": ""
+      },
+      {
+        "className": "android.widget.LinearLayout",
+        "recyclerViewChildPosition": -1,
+        "adapterViewChildPosition": -1,
+        "groupViewChildPosition": 1,
+        "resourceId": "",
+        "contentDescription": "",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "eventType": "VIEW_CLICKED",
+    "timestamp": 1523093256192,
+    "replacementText": "Single Request",
+    "actionCode": -1,
+    "delayTime": 0,
+    "canScrollTo": false,
+    "elementDescriptors": [
+      {
+        "className": "android.widget.Button",
+        "recyclerViewChildPosition": -1,
+        "adapterViewChildPosition": -1,
+        "groupViewChildPosition": 3,
+        "resourceId": "com.androidsrc.client:id/singleButton",
+        "contentDescription": "",
+        "text": "Single Request"
+      },
+      {
+        "className": "android.widget.LinearLayout",
+        "recyclerViewChildPosition": -1,
+        "adapterViewChildPosition": -1,
+        "groupViewChildPosition": 1,
+        "resourceId": "",
+        "contentDescription": "",
+        "text": ""
+      },
+      {
+        "className": "android.widget.LinearLayout",
+        "recyclerViewChildPosition": -1,
+        "adapterViewChildPosition": -1,
+        "groupViewChildPosition": 0,
+        "resourceId": "",
+        "contentDescription": "",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "eventType": "VIEW_CLICKED",
+    "timestamp": 1523093782727,
+    "replacementText": "Stop",
+    "actionCode": -1,
+    "delayTime": 0,
+    "canScrollTo": false,
+    "elementDescriptors": [
+      {
+        "className": "android.widget.Button",
+        "recyclerViewChildPosition": -1,
+        "adapterViewChildPosition": -1,
+        "groupViewChildPosition": 1,
+        "resourceId": "com.androidsrc.client:id/stopButton",
+        "contentDescription": "",
+        "text": "Stop"
+      },
+      {
+        "className": "android.widget.LinearLayout",
+        "recyclerViewChildPosition": -1,
+        "adapterViewChildPosition": -1,
+        "groupViewChildPosition": 2,
+        "resourceId": "com.androidsrc.client:id/linearLayout2",
+        "contentDescription": "",
+        "text": ""
+      },
+      {
+        "className": "android.widget.LinearLayout",
+        "recyclerViewChildPosition": -1,
+        "adapterViewChildPosition": -1,
+        "groupViewChildPosition": 1,
+        "resourceId": "",
+        "contentDescription": "",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "eventType": "VIEW_CLICKED",
+    "timestamp": 1523093784469,
+    "replacementText": "Single Request",
+    "actionCode": -1,
+    "delayTime": 0,
+    "canScrollTo": false,
+    "elementDescriptors": [
+      {
+        "className": "android.widget.Button",
+        "recyclerViewChildPosition": -1,
+        "adapterViewChildPosition": -1,
+        "groupViewChildPosition": 3,
+        "resourceId": "com.androidsrc.client:id/singleButton",
+        "contentDescription": "",
+        "text": "Single Request"
+      },
+      {
+        "className": "android.widget.LinearLayout",
+        "recyclerViewChildPosition": -1,
+        "adapterViewChildPosition": -1,
+        "groupViewChildPosition": 1,
+        "resourceId": "",
+        "contentDescription": "",
+        "text": ""
+      },
+      {
+        "className": "android.widget.LinearLayout",
+        "recyclerViewChildPosition": -1,
+        "adapterViewChildPosition": -1,
+        "groupViewChildPosition": 0,
+        "resourceId": "",
+        "contentDescription": "",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "eventType": "VIEW_CLICKED",
+    "timestamp": 1523095154160,
+    "replacementText": "Stop",
+    "actionCode": -1,
+    "delayTime": 0,
+    "canScrollTo": false,
+    "elementDescriptors": [
+      {
+        "className": "android.widget.Button",
+        "recyclerViewChildPosition": -1,
+        "adapterViewChildPosition": -1,
+        "groupViewChildPosition": 1,
+        "resourceId": "com.androidsrc.client:id/stopButton",
+        "contentDescription": "",
+        "text": "Stop"
+      },
+      {
+        "className": "android.widget.LinearLayout",
+        "recyclerViewChildPosition": -1,
+        "adapterViewChildPosition": -1,
+        "groupViewChildPosition": 2,
+        "resourceId": "com.androidsrc.client:id/linearLayout2",
+        "contentDescription": "",
+        "text": ""
+      },
+      {
+        "className": "android.widget.LinearLayout",
+        "recyclerViewChildPosition": -1,
+        "adapterViewChildPosition": -1,
+        "groupViewChildPosition": 1,
+        "resourceId": "",
+        "contentDescription": "",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "eventType": "VIEW_CLICKED",
+    "timestamp": 1523095155354,
+    "replacementText": "Single Request",
+    "actionCode": -1,
+    "delayTime": 0,
+    "canScrollTo": false,
+    "elementDescriptors": [
+      {
+        "className": "android.widget.Button",
+        "recyclerViewChildPosition": -1,
+        "adapterViewChildPosition": -1,
+        "groupViewChildPosition": 3,
+        "resourceId": "com.androidsrc.client:id/singleButton",
+        "contentDescription": "",
+        "text": "Single Request"
+      },
+      {
+        "className": "android.widget.LinearLayout",
+        "recyclerViewChildPosition": -1,
+        "adapterViewChildPosition": -1,
+        "groupViewChildPosition": 1,
+        "resourceId": "",
+        "contentDescription": "",
+        "text": ""
+      },
+      {
+        "className": "android.widget.LinearLayout",
+        "recyclerViewChildPosition": -1,
+        "adapterViewChildPosition": -1,
+        "groupViewChildPosition": 0,
+        "resourceId": "",
+        "contentDescription": "",
+        "text": ""
+      }
+    ]
+  }
+]
