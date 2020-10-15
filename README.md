@@ -10,6 +10,7 @@ Awareness and Performance Prediction](https://arxiv.org/pdf/2006.07273.pdf).
 The following steps train a CNN on the non-IID MNIST dataset.
 1. Setup
     * Ubuntu 18.04.3 LTS
+    * gcc 7.5
     * Python 3.6
     * Java 1.8.0_77
     * Maven 3.6.3

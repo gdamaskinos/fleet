@@ -19,7 +19,6 @@
   ```
 * Execute:
   ```bash
-    android list sdk --all # DEPRECATED!
     sdkmanager --list
   ```
 * Find the package_ids corresponding to the latest SDK version (or the chosen one) for:
@@ -30,8 +29,7 @@
 * Find the package_id for the ABI (used to create avd emulator):
   * For API-25: Google APIs Intel x86 Atom_64 System Image (or without "Atom_64" for x86 machines) 
   ```bash
-    android update sdk -u -a -t id1,id2,id3,id4,id5 # DEPRECATED!
-    sdkmanager "platform-tools" "platforms;android-25" "system-images;android-25;google_apis;x86"
+    sdkmanager "build-tools;28.0.3" "emulator" "platform-tools" "platforms;android-25" "system-images;android-25;google_apis;x86"
   ```
 * Install NDK
   ```bash
@@ -44,17 +42,11 @@
 ### create avd
 * Make sure the folder: $ANDROID_SDK_ROOT/system-images/android-25/google_apis/x86_64 exists
 ```bash
-android create avd -n [emulator name] -t android-25 --abi x86_64 --tag google_apis # DEPRECATED!
 avdmanager create avd -n emu1 -k "system-images;android-25;google_apis;x86"
 rm $ANDROID_SDK_HOME/.android/avd/emu1.avd/multiinstance.lock # enable multiple emulators on same machine
 ```
 * Modify the -t, --abi, --tag values accordingly for a different API and/or architecture (x86). These values depend on the downloaded packages
 * Each avd takes around 2-4GB
-* Modify $ANDROID_SDK_HOME/.android/avd/[emulator name].avd/config.ini  
-Tested with (RAM and heap size in MB) on grid5000 parasilo:
-  * hw.ramSize=3000
-  * vm.heapSize=512
-  * disk.dataPartition.size=2000M
 
 ### start emulator 
 ```bash
@@ -62,6 +54,12 @@ emulator -avd [emulator name] -no-window
 ```
 * In case of hardware missing features (e.g. emulator: WARNING: Host CPU is missing the following feature(s) required for x86_64 emulation: SSSE3 SSE4.1 SSE4.2 POPCNT) the emulator will probably not start
 * The emulator might not start in some machines (e.g. some of the graphene nodes)
+* Troubleshoot: Modify `$ANDROID_SDK_HOME/.android/avd/[emulator name].avd/config.ini`
+Tested with (RAM and heap size in MB) on grid5000 parasilo:
+  * hw.ramSize=3000M
+  * vm.heapSize=512M
+  * disk.dataPartition.size=2000M
+
 
 ### launch emulator shell
 ```bash

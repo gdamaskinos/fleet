@@ -46,7 +46,7 @@ SCRIPTPATH=`dirname $SCRIPT`
 {
   adb -s emulator-$emuSerial shell getprop init.svc.bootanim > /dev/null
 } || {
-  echo "Must first start Android emulator. e.g., cd $SCRIPTPATH/client_cmd_deployment && ./start_emu_single_machine.sh $number_of_emus 1000"
+  echo "Must first start Android emulator. e.g., cd $SCRIPTPATH/client_cmd_deployment && ./start_emu_single_machine.sh $number_of_emus 1 1000"
   exit
 }
 
