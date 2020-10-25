@@ -228,7 +228,7 @@ public class Dl4jUpdater implements SGDUpdater {
 		
 		g.gradient(); // call to trigger the flattened gradient creation
 		//NDArray gradient = (NDArray) g.gradient();
-		acc.add(new Quadruple<>(g, null, epoch, -1));
+		acc.add(new Quadruple<>(g, new int[0], epoch, -1));
 
 		System.out.println("Read bytes: " + Helpers.humanReadableByteCount(in.total(), false));
 		/* M-soft sync */

@@ -148,19 +148,19 @@ public class Driver {
 //		System.out.println("Validation\t" + validSet.numExamples() + "\t" + validSet.featureSize() + "\t" + validSet.numLabels());
 //		testSet = createDataSet(localPathPrefix + testXPath, localPathPrefix + testTPath);
 //		System.out.println("Test      \t" + testSet.numExamples() + "\t" + testSet.featureSize() + "\t" + testSet.numLabels());
-		Evaluator eval = new Evaluator(serverPath);
-		
-		
-		// number of rows and columns in the input pictures
-//		int featureSize = validSet.featureSize();
+//		int featureSize = validSet.featureSize(); // number of rows and columns in the input
 //		int numLabels = validSet.numLabels(); // number of output classes
+		
 		int rngSeed = 123; // random number seed for reproducibility
+		
+		Evaluator eval = new Evaluator(serverPath);
+
 
 		/* MLP */
 //		// spambase (z-score standardization, ratio1=0.8, ratio2=0.9) -> 92% @ 500+ epochs (not converged)
 //		// mnist (X = preprocessing.MinMaxScaler(feature_range=(0,1)).fit_transform(X), ratio1=60000, ratio2=54000) -> epoch:48 Error:1.7392 Acc:0.6517 (not converged)
 //        int batchSize = 128; // batch size for each epoch
-//		double lrate = 0.006 / 128; // constant
+//		lrate = 0.006 / 128; // constant
 //		MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder().seed(rngSeed) 
 //				// use stochastic gradient descent as an optimization algorithm
 //				.optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
@@ -193,7 +193,7 @@ public class Driver {
 //		int nChannels = 1;
 //		int lid = 0;
 //      int batchSize = 50; // batch size for each epoch
-//		double lrate = 0.00005 / 50;
+//		lrate = 0.00005 / 50;
 //		System.out.println("Lrate: " + lrate);
 //		System.out.println("BatchSize: " + batchSize);
 //        MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
@@ -261,8 +261,8 @@ public class Driver {
 //		int width = featureSize / 28;
 //		int nChannels = 1;
 //		int lid = 0;
-//		// double lrate = 0.006;
-//		double lrate = 0.006;
+//		// lrate = 0.006;
+//		lrate = 0.006;
 //        MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
 //                .seed(rngSeed) //include a random seed for reproducibility
 //                .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT) 
@@ -327,7 +327,7 @@ public class Driver {
 //		int nChannels = 1;
 //		int lid = 0;
 //		int batchSize = 128;
-//		double lrate = 0.05 / 128;
+//		lrate = 0.05 / 128;
 //		System.out.println("Lrate: " + lrate);
 //		System.out.println("BatchSize: " + batchSize);
 //        MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
@@ -405,7 +405,7 @@ public class Driver {
 //		int width = featureSize / 28;
 //		int nChannels = 1;
 //	    //int batchSize = 64; // batch size for each epoch
-//		double lrate = 0.08 / 100;
+//		lrate = 0.08 / 100;
 //		MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
 //	                .seed(rngSeed)
 //	                .regularization(true).l2(0.0005)
@@ -449,9 +449,9 @@ public class Driver {
 //	                .backprop(true).pretrain(false).build();
 		
 		// TODO change here with XModel
-		//Dl4jModel model = new Dl4jModel(conf, iterations, lrate, 1, 25);
-		//Dl4jMultiLabelModel model = new Dl4jMultiLabelModel(conf, iterations, lrate, 1, 1, 0.001);
-		//Dl4jMultiLabelModel model = new Dl4jMultiLabelModel(conf, iterations, lrate, 1, 1, 1);
+		//Dl4jModel model = new Dl4jModel(conf, clientRequestsNum, lrate, 1, 25);
+		//Dl4jMultiLabelModel model = new Dl4jMultiLabelModel(conf, clientRequestsNum, lrate, 1, 1, 0.001);
+		//Dl4jMultiLabelModel model = new Dl4jMultiLabelModel(conf, clientRequestsNum, lrate, 1, 1, 1);
 
 		//SimpleCNNModel model = new SimpleCNNModel(iterations, 0.0102, 2, 1, 28, 28, 1);
 //		MojoCNNModel model = new MojoCNNModel(iterations, 0.0008, 1, 1, localPathPrefix, false, null); // MNIST
