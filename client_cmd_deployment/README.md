@@ -9,7 +9,7 @@
    export ANDROID_HOME=/path/to/android_sdk
   ```
 * [Download](https://developer.android.com/studio/index.html) latest sdk command line tools (checked with tools 28.0.3 for linux)
-* Unzip to $ANDROID_SDK_ROOT 
+* Unzip to `$ANDROID_SDK_ROOT` (in case of [issues](https://stackoverflow.com/questions/60440509/android-command-line-tools-sdkmanager-always-shows-warning-could-not-create-se) unzip to `$ANDROID_SDK_ROOT/cmdline-tools`)
 * Export Path Variables
   ```bash
    # the following paths may alter depending on the sdk tools
@@ -50,6 +50,7 @@ rm $ANDROID_SDK_HOME/.android/avd/emu1.avd/multiinstance.lock # enable multiple 
 
 ### start emulator 
 ```bash
+adb start-server # optional
 emulator -avd [emulator name] -no-window
 ```
 * In case of hardware missing features (e.g. emulator: WARNING: Host CPU is missing the following feature(s) required for x86_64 emulation: SSSE3 SSE4.1 SSE4.2 POPCNT) the emulator will probably not start
