@@ -321,6 +321,7 @@ public class Driver {
 //                .pretrain(false).backprop(true).build();
 
 		
+		// TODO comment back in the following block of lines for setting the DL4J model
 		// mnist (X = preprocessing.MinMaxScaler(feature_range=(0,1)).fit_transform(X), ratio1=60000, ratio2=54000)  eval:112 938 -1.0000 -1.0000 0.1727  0.9533  968468
 //		int height = 28;
 //		int width = featureSize / 28;
@@ -537,7 +538,6 @@ public class Driver {
 				try {
 					Thread.sleep(1000);
 				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 				System.out.println("Retrying...");

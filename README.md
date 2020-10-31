@@ -1,3 +1,12 @@
+<div class="row">
+  <div class="column">
+    <img src="badges/artifacts_evaluated_functional.jpg" align="right" width="15%" height="15%">
+  </div>
+  <div class="column">
+    <img src="badges/artifacts_available.jpg" align="right" width="15%" height="15%">
+  </div>
+</div>
+
 # FLeet
 
 Author: Georgios Damaskinos (georgios.damaskinos@gmail.com)
@@ -93,3 +102,4 @@ See [Quick Start](#quick-start).
 * For parsing into FLeet:
   * Comment out [these lines](Driver/src/main/c%2B%2B/cppNN_backend.cpp#L91-L117) and comment in [these lines](Driver/src/main/c%2B%2B/cppNN_backend.cpp#L119-L138). Choose [this line](Driver/src/main/c%2B%2B/cppNN_backend.cpp#L135) for CIFAR-100 or [this line](Driver/src/main/c%2B%2B/cppNN_backend.cpp#L136) for CIFAR-10.
   * Comment out [these lines](Server/src/main/c%2B%2B/cppNN_backend.cpp#L400-L401) and comment in [these lines](Server/src/main/c%2B%2B/cppNN_backend.cpp#L404-L405) for CIFAR-100 or [these lines](Server/src/main/c%2B%2B/cppNN_backend.cpp#L406-L407) for CIFAR-10.
+  * Comment in [this line](Server/src/main/c%2B%2B/cppNN_backend.cpp#L408) for both datasets.
